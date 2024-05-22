@@ -1,0 +1,349 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage{fontawesome5} % for using icons
+\usepackage{ifthen} % for conditional statements
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemColon}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{
+  \item\small{\textbf{#1}{: #2 \vspace{-6pt}}
+  }
+}
+
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\mbox{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{https://www.google.com/}{\Large Thomas Bartlett}} & Email : \href{mailto:thomas.id@outlook.com}{thomas.id@outlook.com}\\
+%   % \href{https://www.google.com/}{https://www.google.com/}
+%   & Mobile : \href{tel:+12089720066}{+1-208-972-0066} \\
+% \end{tabular*}
+
+\begin{header}
+  \textbf{\fontsize{30 pt}{30 pt}\selectfont Emily Bartlett}
+
+  \vspace{0.3 cm}
+
+  \normalsize
+  \mbox{
+      {\color{black}{\footnotesize\faMapMarker*}\hspace*{0.13cm}Boise ID}
+  }
+  \kern 0.5 cm
+  \mbox{
+      \hrefWithoutArrow{mailto:ebart415@gmail.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}emybart415@gmail.com}
+  }
+  \kern 0.5 cm
+  \mbox{
+      \hrefWithoutArrow{tel:+12084015186}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}+1-208-401-5186}
+  }
+  % \kern 0.5 cm
+  % \mbox{
+  %     \hrefWithoutArrow{https://www.google.com/}{\color{black}{\footnotesize\faLink}\hspace*{0.13cm}yourwebsite.com}
+  % }
+  % \kern 0.5 cm
+  % \mbox{
+  %     \hrefWithoutArrow{https://www.linkedin.com/in/thomas-bartlett-1767a2195/}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}thomas-bartlett}
+  % }
+  \kern 0.5 cm
+  \mbox{
+      \hrefWithoutArrow{https://github.com/emybart415}{\color{black}{\footnotesize\faGithub}\hspace*{0.13cm}emily-bartlett}
+  }
+  \kern 0.5 cm
+\end{header}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Master of Science in Biology - Bioinformatics and Genomics Program}{Eugene, OR}
+      {The University of Oregon}{June 2023 -- Present}
+    
+\smallskip
+      {All coursework complete, degree pending internship completion}
+    \resumeSubheading
+      {Bachelor in Biology}{Boise, ID}
+      {The College of Idaho; GPA: 3.8}{August 2015 -- May 2019}
+      \resumeItemListStart
+%        \resumeItemColon{Additional Specializations}
+%          {Data Science, Business, and Marketing}
+        \resumeItemColon{Minor}
+          {Graphic design and Criminal Psychology}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+% %--------PROGRAMMING SKILLS-----------
+\section{Skills}
+\textbf{Languages:} 
+\textit{Proficient:} R, Python, Bash \quad 
+\textit{Experienced:} SQL
+
+\smallskip
+\textbf{Computational:} 
+NumPy, Pandas, AWS, Docker, Linux, Git, GitHub, Jupyter Notebook, STAR, DESeq, CIBERSORTx, slurm, Seraut
+
+\smallskip
+\textbf{Laboratory:}
+Immunofluorescence, Flow cytometry, Murine handling, High-throughput qRT-PCR, Next-Generation Sequencing library prep
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+      
+% --------Multiple Positions Heading------------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+
+
+%\resumeSubheading
+ % {Clearwater Analytics}{Boise, ID}
+  %{Software Development Engineer}{June 2022 -- Sept 2023}
+%  \resumeItemListStart
+%    \resumeItem{}
+%      {Maintained software used by some of the world's largest technology firms, fixed income asset managers, and custodian banks}
+%    \resumeItem{}
+%      {Developed a diverse range of applications, handling both backend and frontend responsibilities for 12 projects}
+%    \resumeItem{}
+%      {Selected to be on the Generative AI team, utilizing cutting-edge large language models (LLMs) to achieve business goals. Development work included \href{https://clearwateranalytics.com/press-releases/clearwater-analytics-announces-clearwater-gpt/}{Clearwater-GPT} and several other AI solutions}
+    % \resumeItem{}
+    %   {Contributed to design and architectural decisions}
+%    \resumeItem{}
+%%      {Transitioned on-premises applications to the cloud (AWS) using Terraform, focusing on a lift-and-shift approach}
+%    \resumeItem{}
+ %     {Designed and prototyped an innovative job queuing system with Redis, addressing and resolving database contention issues in the previous system}
+%  \resumeItemListEnd
+
+
+\resumeSubheading
+    {Graduate Researcher: BEAT Acute Myeloid Leukemia}{Eugene, OR}
+    {University of Oregon, in collaboration with OHSU}{September 2023 -- March 2024}
+
+\smallskip
+\textbf{Overview:} 
+{Acute myeloid leukemia's heterogeneity complicates treatment selection. Effective therapy relies on analyzing cell type proportions and drug response data to inform decision making. Data was collected from patients with AML, samples underwent both bulk RNA sequencing and drug sensitivity testing.}
+    \resumeItemListStart
+      \resumeItem{}
+        {Deconvoluted 707 bulk tumor cell RNA-seq samples, using CIBERSORTx, to infer leukemic cell types, to investigate the response of tumor cells to combinatorial drug responses.}
+      \resumeItem{}
+        {Successful replication of workflows was confirmed by using statistical tests (Pearson correlation) to compare cell type ratios to ground truth.}
+      \resumeItem{}
+        {Calculated “area under the curve” (AUC) values for drug sensitivity data by fitting curves using the n-parameter logistic regression (nplr) r package.}
+      \resumeItem{}
+        {Reduced dimensionality using principal component analysis (PCA), the second principal component was then correlated with the AUC data allowing visualization on a primitive to mature cell type axis, highlighting which drug combinations were more effective.}
+    \resumeItemListEnd
+
+\resumeSubheading
+    {Molecular Laboratory Medical Technologist}{Boise, ID}
+    {Boise VA Medical Center}{April 2020 -- May 2023}
+
+\smallskip
+\textbf{Overview:}
+{Implementation of a molecular diagnostic lab focusing on COVID-19 testing and genetic sequencing tech, elevating patient care and public health.}
+    \resumeItemListStart
+      \resumeItem{}
+        {Extracted and ran up to 35 96-well RNA extraction plates per week on high throughput RT-qPCR platform. }
+      \resumeItem{}
+        {Maintained fast turnaround time by developing and optimizing procedures, essential for the laboratory to continue functioning during the pandemic.}
+      \resumeItem{}
+        {Coordinated with Illumina to implement COVID-19 and pharmacogenomics sequencing, including securing new laboratory space, setting up an in-house server for analysis, training staff members, and validating the assay for clinical testing.}
+      \resumeItem{}
+        {Tracked fund control point usage, ensuring reagents were ordered from appropriate funding sources, supporting efficient reconciliation of finances. }
+    \resumeItemListEnd
+\pagebreak
+
+\resumeSubheading
+    {Laboratory Research Technician}{Boise, ID}
+    {Radke Lab, Boise VA Medical Center, IVREF}{September 2019 –- May 2020}
+
+\smallskip
+\textbf{Overview:}
+{How the innate immune response differs during infection between virulent adenovirus strain Ad14p1 and the less virulent Ad14, employing Syrian Hamsters as animal models.}
+    \resumeItemListStart
+      \resumeItem{}
+        {Investigated differential immune cell infiltration between the adenovirus strains by infecting hundreds of Syrian Hamsters and extracting epithelial macrophage cells using bronchoalveolar lavage.}
+      \resumeItem{}
+        {Optimized workflows to analyze immune cell infiltration by staining BAL samples with hundreds of molecular probe and fluorophore combinations to distinguish cell types with flow cytometry.}
+      \resumeItem{}
+        {Expedited flow cytometry analysis and created publication quality figures using FlowJo.}
+    \resumeItemListEnd
+
+\resumeSubheading
+    {Biochemistry Lab Manager/Research Assistant}{Boise, ID}
+    {Warner Lab, Boise State University}{September 2019 -- May 2020}
+    \resumeItemListStart
+      \resumeItem{}
+        {Sustained laboratory operations by maintaining two sets of media stock, aliquoting all reagents, and ordering new reagents necessary for projects.}
+      \resumeItem{}
+        {Developed efficient and reliable cost-saving protocol for multicasting up to 50 SDS-PAGE gels per week, optimizing lab resources and efficiency.}
+      \resumeItem{}
+        {Maintained consistency across the lab by developing dozens of laboratory standard operating procedures.}
+    \resumeItemListEnd    
+
+\resumeSubheading
+    {Undergraduate Researcher}{Caldwell, ID}
+    {Pirtle Lab, College of Idaho/Idea networks of biomedical excellence (INBRE)}{May 2018 -- August 2018}
+    \resumeItemListStart
+      \resumeItem{}
+        {Studied the impact of e-cigarette chemicals on bone development using chicken embryos as a model organism.}
+      \resumeItem{}
+        {Micro-dissected 100s of leg bones to analyze changes in wet and dry weights to investigate the impact of treatment on development.}
+      \resumeItem{}
+        {Collaborated with two peers to present research findings at the INBRE conference in Moscow, Idaho, and the West Coast Biological Sciences Undergraduate Research Conference in San Diego.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+%\section{Projects}
+%  \resumeSubHeadingListStart
+%    \resumeSubItem{Species Distribution Modeling of Presence-only Species
+%    Data}
+%      {Implemented a  neural network-based multi-species species distribution model (SDM), utilizing special loss functions to address challenges with positive-only data in ecological research and conservation. }
+%    \resumeSubItem{Spring Boot Online Store Application}
+%      {Developed a mock Java application emulating an online storefront, utilizing Spring Boot and a Kaggle dataset. Implemented comprehensive tests to ensure robustness. Emphasis was placed on backend development, creating a robust and scalable foundation for the mock online store.}
+%    \resumeSubItem{Mitigating Gradient Flow Challenges in Deep Neural Networks}
+%      {Implemented and conducted experiments on Google Cloud Platform (GCP) to address the vanishing/exploding gradient problem in deep neural networks, specifically analyzing VGG models with 8 and 38 hidden layers on the CIFAR100 image dataset. Introduced and implemented solutions, including batch normalization and residual connections.}
+%  \resumeSubHeadingListEnd
+
+%-----------AWARDS/ACHIEVEMENTS-----------------
+%\section{Awards/Achievements}
+%  \resumeSubHeadingListStart
+%    \resumeSubItem{Spot Award Clearwater Analytics}
+%      {Q3 2022}
+%    \resumeSubItem{Dean's Distinguished Senior Award}
+%      {May 2022}
+%    \resumeSubItem{First-year Calculus Award}
+%      {May 2019}
+%    \resumeSubItem{Dean's List}
+%      {Spring 2022, Fall 2021, Spring 2021, Fall 2020, Spring 2020, Fall 2019, Spring 2019, Fall 2018}
+%    \resumeSubItem{Presidential Scholarship}
+%      {August 2018}
+%      \resumeSubItem{\href{https://www.ncbi.nlm.nih.gov/nuccore/1896092868}{Coauthor of GenBank publication}}
+%      {June 2020}
+%  \resumeSubHeadingListEnd
+
+%-----------ACTIVITIES-----------------
+%\section{Activities}
+%  \resumeSubHeadingListStart
+%    \resumeSubItem{University of Edinburgh Futsal Club}
+%      {August 2023 -- Present}
+%    \resumeSubItem{CompSoc Edinburgh}
+%      {August 2023 -- Present}
+%    \resumeSubItem{College of Idaho Varsity Men's Soccer}
+%      {August 2018 -- November 2021}
+%    \resumeSubItem{Founder and President of The College of Idaho Coding Club}
+%      {August 2021 -- May 2022}
+%    \resumeSubItem{Treasurer of Political Club}
+%      {August 2019 -- Spring 2020}
+%    \resumeSubItem{Gipson Honor's Program Mentor}
+%      {Fall 2019 -- Spring 2020}
+%  \resumeSubHeadingListEnd
+
+
+\end{document}
